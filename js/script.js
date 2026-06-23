@@ -1,0 +1,15 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle("active");
+    navLinks.classList.toggle('active');
+});
+const navItems = document.querySelectorAll('.nav-links a');
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+    });
+});
